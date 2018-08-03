@@ -1,0 +1,30 @@
+h1 {
+  font-family: fantasy;
+  color: rgb(248, 122, 206);
+  
+}
+mat-grid-tile {
+  background: lightblue;
+  border-radius: 15px;
+  color: blue;
+  text-emphasis-position: 35%
+ 
+}
+mat-grid-tile:hover {
+  background: rgb(67, 147, 173);
+  border-radius: 35px;
+  color: blue
+}
+mat-grid-list {
+  background: rgb(248, 122, 206);
+  border-radius: 15px;}
+a {
+    position: absolute;
+    left: 35%;
+    top: 60%;
+    font-family: fantasy;
+    color:  rgb(248, 122, 206);
+    font-size: 150%
+    
+    
+  }

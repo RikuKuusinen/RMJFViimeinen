@@ -1,0 +1,55 @@
+<h1>
+    Ravintolat
+  </h1>
+  <mat-grid-list cols="1" rowHeight="2:1">
+
+    <mat-grid-tile [class.selected]="p==selectedRavintola" *ngFor="let p of ravintolat" >
+     <h2 (click)="onSelect(p)">{{p.ravintolanNimi}} </h2> 
+      
+        <!-- {{p.ravintolaKommentit.kommentti}} 
+      <a routerLink="/ravintolakommentit/{{p.ravintolaId}}">Lisätiedot</a>  -->
+
+      <div [style.display] ="isVisible ? 'block' : 'none'">  <br/>
+       {{p.ravintolaKommentit[0].kommentti}}
+       <br/>
+       <p> DarraRate = {{p.ratingDarra}}</p>
+       <p>KänniRate = {{p.ratingKanni}}</p>
+       <p>Käyntiosoite = {{p.osoite}}</p>
+       </div>
+ 
+  
+
+    
+      <!-- <p *ngIf="selectedRavintola"> Tarkemmat tiedot: {{selectedRavintola.ravintolanNimi}}, <span [innerHTML]="selectedRavintola.osoite"></span><br/></p>
+      -->
+      </mat-grid-tile> 
+
+</mat-grid-list>
+
+<p> Luo uusi ravintola: 
+    
+    <form >
+      Ravintola Nimi:<br>
+      <input type="text" name="RavintolaNimi" value="RavintolanNimi">
+      <br>
+    Ravintolan osoite:<br>
+      <input type="text" name="osoite" value="osoite">
+      <br><br>
+      <input type="submit"  (click)="createRavintola(osoite, RavintolaNimi)"  value="Submit">
+     
+    
+    </form> 
+    
+          
+     
+  <!-- <p *ngIf="selectedRavintola">
+    Tarkemmat tiedot: {{selectedRavintola.ravintolanNimi}}, <span [innerHTML]="selectedRavintola.osoite"></span><br/> -->
+
+  <!--  Email, ylläpito:<input required type="email" [(ngModel)]="selectedPerson.Email" />
+  </p>
+  <app-person-details [person]="selectedPerson"></app-person-details>
+  
+  <h3>Luo:</h3>
+  Nimi: <input #name>
+  Email: <input #email>
+  <button (click)="addPerson(name.value, email.value);name.value='';email.value=''">Lisää</button>-->
